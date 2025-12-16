@@ -11,10 +11,6 @@ const photoMemories = [
     description: "Prima dată când eu am pus capul pe tine și ca deobicei o trebuit o poză in care să ies minunat.😂❤️ "
   },
   {
-    image: "poze/poza3.jpg",
-    description: "Prima noastra poză impreună 🌸 Tot în ziua asta m-ai sărutat prima dată și mi-ai zis că maiubești(eu tot te iubesc).🫶"
-  },
-  {
     image: "poze/poza4.jpg", 
     description: "Balul Bobocilor 🐣 M-am simțit așa de în siguranță in ziua ceea și era așa de cald lângă tine, cald în toate modurile posibile...❤️‍🩹"
   },
@@ -41,10 +37,6 @@ const photoMemories = [
   {
     image: "poze/poza10.jpg",
     description: "Aici când te apucasei de lucru deam și ieșeam după lucru și țin minte cum mă supărasem o dată că nu ți-o dat singur în cap să rupi crenguțe și aici imi rupsesei una singur și așa taree mi-o plăcut...🥰🥰🥰"
-  },
-  {
-    image: "poze/poza11.jpg",
-    description: "Când ne certam in hol(în glumă) și ne arătam fuck you și după pur simplu m-ai tras și m-ai sărutat.💏❤️"
   },
   {
     image: "poze/poza12.jpg",
@@ -125,10 +117,6 @@ const photoMemories = [
   {
     image: "poze/poza31.jpg",
     description: "Ziua ta.Ador poza asta.💞"
-  },
-  {
-    image: "poze/poza32.jpg",
-    description: "Când ai venit la mine și te jucai cu Luca în play stacion.✨"
   },
   {
     image: "poze/poza33.jpg",
