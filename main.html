@@ -144,5 +144,26 @@
   <script src="javascript/love-reasons.js"></script>
   <!-- ADAUGĂ FIȘIERUL PENTRU GENERATORUL DE POZE -->
   <script src="javascript/photo-generator.js"></script>
+  
+  <script>
+let lastScrollTop = 0;
+const header = document.querySelector('.site-header');
+
+window.addEventListener('scroll', function() {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > lastScrollTop) {
+    // Scroll în jos → ascunde header-ul
+    header.style.top = "-100px";
+  } else {
+    // Scroll în sus → arată header-ul
+    header.style.top = "0";
+  }
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // previne valori negative
+});
+</script>
+
 </body>
+
 </html>
