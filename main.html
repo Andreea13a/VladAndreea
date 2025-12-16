@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagina Noastră 💖</title>
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-container">
+      <h1>Pentru persoana mea preferată! 💕</h1>
+    </div>
+  </header>
+
+  <!-- CONTAINER PRINCIPAL CARE VA AVEA SCROLL -->
+  <div class="main-scroll-container">
+    
+    <div class="page-content">
+      <aside class="sidebar">
+        <h2>📅 Evenimente importante</h2>
+        <ul id="event-list">
+          <li><span class="event-name">🎂 Ziua Andreei (13 martie)</span><span class="countdown" data-month="3" data-day="13"></span></li>
+          <li><span class="event-name">🎁 Ziua lui Vlad (27 septembrie)</span><span class="countdown" data-month="9" data-day="27"></span></li>
+          <li><span class="event-name">💑 Aniversare (9 noiembrie)</span><span class="countdown" data-month="11" data-day="9"></span></li>
+          <li><span class="event-name">💘 Ziua Îndrăgostiților (14 februarie)</span><span class="countdown" data-month="2" data-day="14"></span></li>
+          <li><span class="event-name">😘 Primul sărut (17 noiembrie)</span><span class="countdown" data-month="11" data-day="17"></span></li>
+        </ul>
+      </aside>
+
+      <main class="main-area">
+        <div class="photo-section">
+          <img src="poza_noastra.jpg" alt="Noi doi" class="main-photo">
+          <p class="photo-date">06.09.2025 💖</p>
+        </div>
+
+        <div class="generator-box">
+          <h3>💌 Mesaje pentru ingerașu meu</h3>
+          <div class="message-display" id="messageDisplay">
+            Apasă butonul pentru un mesaj special... ✨
+          </div>
+          <button id="generateBtn">✨ Generează Mesaj</button>
+        </div>
+      </main>
+    </div>
+
+    <!-- CONȚINUT SUPLIMENTAR MAI JOS -->
+    <div class="extra-content">
+      
+      <h2>📸 Amintirile Noastre</h2>
+      <div class="memories-grid">
+        
+        <!-- CASETA 1 -->
+        <div class="memory-card">
+          <div class="memory-icon">💕</div>
+          <h4>Prima Întâlnire</h4>
+          <div class="memory-content">
+            <p>Când m-ai văzut prima oară la colegiu la educația fizică și m-ai chemat lângă tine, nu venisem și când mi-ai cerut ig după perechi, ți-am zis că am prieten..</p>
+            <span class="memory-date">📅 03 septembrie 2024</span>
+          </div>
+        </div>
+        
+        <!-- CASETA 2 -->
+        <div class="memory-card">
+          <div class="memory-icon">🩷</div>
+          <h4>Ziua in care am început a vorbi</h4>
+          <div class="memory-content">
+            <p>Când ți-am spus că nu vreau nimic și ai zis că o să aștepți.După ziua ceea am început să vorbim normal.</p>
+            <span class="memory-date">💘 19 septembrie 2024</span>
+          </div>
+        </div>
+        
+        <!-- CASETA 3 -->
+        <div class="memory-card">
+          <div class="memory-icon">❤️‍🩹</div>
+          <h4>Seara când am început să ne întâlnim</h4>
+          <div class="memory-content">
+            <p>Când mi-ai spus că ai realizat că nu vrei să pierzi așa persoană ca mine și m-ai intrebat dacă vreau să fiu prietena ta..</p>
+            <span class="memory-date">❤️ 9 noiembrie 2024</span>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- GENERATOARELE UNUL LÂNGĂ ALTUL (MAI MICI) -->
+      <div class="compact-generators-section">
+        <h2>✨ Generatoare Speciale ✨</h2>
+        
+        <div class="compact-generators-container">
+          
+          <!-- GENERATORUL DE MOTIVE (STÂNGA) -->
+          <div class="compact-generator">
+            <div class="compact-generator-card">
+              <h3>💖 126 de motive pentru care te iubesc</h3>
+              <p class="compact-subtitle">"Primul motiv este pur simplu, pentru ca ești"</p>
+              <div class="compact-message-display" id="loveReasonDisplay">
+                Apasă butonul pentru a descoperi un motiv... ✨
+              </div>
+              <button id="generateLoveReasonBtn" class="compact-button">✨ Descoperă motivul</button>
+            </div>
+          </div>
+          
+          <!-- GENERATORUL DE POZE (DREAPTA) -->
+          <div class="compact-generator">
+            <div class="compact-generator-card">
+              <h3>📸 Amintiri </h3>
+              <p class="compact-subtitle">"Momentele noastre preferate"</p>
+              
+              <!-- Container pentru poza și descriere -->
+              <div class="compact-photo-container">
+                <!-- Poza în partea de sus (MAI MARE) -->
+                <div class="compact-photo-wrapper">
+                  <img id="randomPhoto" src="" alt="Amintire noastră" class="compact-photo">
+                  <div class="compact-photo-placeholder" id="photoPlaceholder">
+                    📸
+                  </div>
+                </div>
+                
+                <!-- Descrierea sub poza -->
+                <div class="compact-description-box">
+                  <div class="compact-photo-description" id="photoDescription">
+                    Apasă butonul pentru o amintire și descoperă povestea ei...
+                  </div>
+                </div>
+              </div>
+              
+              <button id="generatePhotoBtn" class="compact-button">🔄 Schimbă amintirea</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div> <!-- Închide .main-scroll-container -->
+
+  <footer class="site-footer">
+    <p>Pupici cu sclipici.💋</p>
+  </footer>
+
+  <script src="../javascript/countdown.js"></script>
+  <script src="../javascript/generator-final.js"></script>
+  <script src="../javascript/love-reasons.js"></script>
+  <!-- ADAUGĂ FIȘIERUL PENTRU GENERATORUL DE POZE -->
+  <script src="../javascript/photo-generator.js"></script>
+</body>
+</html>

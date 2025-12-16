@@ -1,0 +1,109 @@
+/* Reset general și font */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fundalul paginii */
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fddde6, #ffe4f1);
+}
+
+/* Container pentru formular sau mesaje */
+.container {
+  background: #fff;
+  padding: 35px 30px;
+  border-radius: 20px;
+  width: 340px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+/* Titluri */
+h1 {
+  margin-bottom: 15px;
+  color: #d45a7a;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* Paragraf pentru text suplimentar */
+p {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+/* Input-uri */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #d45a7a;
+  outline: none;
+}
+
+/* Buton login */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 12px;
+  background-color: #d45a7a;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #c14f6c;
+}
+
+/* Mesaj de eroare */
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+/* Ascundere elemente */
+.hidden {
+  display: none;
+}
+
+/* Mesaj de bun venit */
+.welcome-msg {
+  font-size: 28px;
+  color: #d45a7a;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Animatie fade-in pentru mesaj */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
