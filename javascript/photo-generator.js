@@ -3,151 +3,151 @@
 // Lista de poze cu mesaje aferente (38 de poze cu mesaje personale)
 const photoMemories = [
   {
-    image: "../poze/poza1.jpg",
+    image: "poze/poza1.jpg",
     description: "Prima dată când te-ai lăsat cu capul pe mine 💕 .Ți-am pus și steluța ceea imi păr și acum țin minte ca mă temeam dacă o să o vrei sau nu."
   },
   {
-    image: "../poze/poza2.jpg",
+    image: "poze/poza2.jpg",
     description: "Prima dată când eu am pus capul pe tine și ca deobicei o trebuit o poză in care să ies minunat.😂❤️ "
   },
   {
-    image: "../poze/poza3.jpg",
+    image: "poze/poza3.jpg",
     description: "Prima noastra poză impreună 🌸 Tot în ziua asta m-ai sărutat prima dată și mi-ai zis că maiubești(eu tot te iubesc).🫶"
   },
   {
-    image: "../poze/poza4.jpg", 
+    image: "poze/poza4.jpg", 
     description: "Balul Bobocilor 🐣 M-am simțit așa de în siguranță in ziua ceea și era așa de cald lângă tine, cald în toate modurile posibile...❤️‍🩹"
   },
   {
-    image: "../poze/poza5.jpg",
+    image: "poze/poza5.jpg",
     description: "Ziua Ionelei.Amintiri la balcon.🔒"
   },
   {
-    image: "../poze/poza6.jpg",
+    image: "poze/poza6.jpg",
     description: "Când am ieșit cu Teo, am fost la magazin, ai cumpărat o grămadă de prostii care imi plac și am mâncat toți. 🍽️Și când eram in doi, lângă scaun atunci și îl strigai pe Teo să nu se ducă departe.😂"
   },
   {
-    image: "../poze/poza7.jpg",
+    image: "poze/poza7.jpg",
     description: "Când eram la canapele și ne jucam și ai inceput să mă gâdili intrunaaa😄 Ionela ne făcuse pozele."
   },
   {
-    image: "../poze/poza8.jpg",
+    image: "poze/poza8.jpg",
     description: "Asta ii poza normală📸 În celelalte te strâmbase-i special, pentru că te pusesem să faci poza.💜"
   },
   {
-    image: "../poze/poza9.jpg",
+    image: "poze/poza9.jpg",
     description: "Doamneee, aici cînd venisei la mine de dimineață și ne pornisem la colegiu, eu aveam probleme atunci și când am vazut la baie în centru că mă pătasem, am început a plânge în baie, m-ai liniștit și am mers iar acasă să mă schimb...îți trebuia nota la chimie, dar ai mers oricum cu mine înapoi acasă...❤️"
   },
   {
-    image: "../poze/poza10.jpg",
+    image: "poze/poza10.jpg",
     description: "Aici când te apucasei de lucru deam și ieșeam după lucru și țin minte cum mă supărasem o dată că nu ți-o dat singur în cap să rupi crenguțe și aici imi rupsesei una singur și așa taree mi-o plăcut...🥰🥰🥰"
   },
   {
-    image: "../poze/poza11.jpg",
+    image: "poze/poza11.jpg",
     description: "Când ne certam in hol(în glumă) și ne arătam fuck you și după pur simplu m-ai tras și m-ai sărutat.💏❤️"
   },
   {
-    image: "../poze/poza12.jpg",
+    image: "poze/poza12.jpg",
     description: "Aici ieșisem pe 31 mai toți in centru, nimic deosebit, doar imi place poza taree cum te uitai la mine și ce față ai făcut.😄"
   },
   {
-    image: "../poze/poza13.jpg",
+    image: "poze/poza13.jpg",
     description: "31 mai, ai venit din spate când îmi făcea Ionela poze mie și ai vrut sa facem împreunăă.🥰🥰🥰"
   },
   {
-    image: "../poze/poza14.jpg",
+    image: "poze/poza14.jpg",
     description: "Aici nu mai știai unde să mergem (ca deobicei) și am zis eu de Amor Amar.❤️"
   },
   {
-    image: "../poze/poza15.jpg",
+    image: "poze/poza15.jpg",
     description: "Daaa primul picnic.Ai comandat sushi și am stat împreună in parc(la film nu ne-am mai uitat).💏😂"
   },
   {
-    image: "../poze/poza16.jpg",
+    image: "poze/poza16.jpg",
     description: "La pozele astea nici nu am descriere..Iubesc cum te uiți la mine...💕"
   },
   {
-    image: "../poze/poza17.jpg",
+    image: "poze/poza17.jpg",
     description: "Vibe de picnic..💫"
   },
   {
-    image: "../poze/poza18.jpg",
+    image: "poze/poza18.jpg",
     description: "Aici iar la picnic, preferatele noastre erau deam.Luasem și cartea de colorat si o grămadă de mâncare de care nici nu ne-am atins.😂Sucurile in schimb..😍"
   },
   {
-    image: "../poze/poza19.jpg",
+    image: "poze/poza19.jpg",
     description: "Gentelmen.❤️"
   },
   {
-    image: "../poze/poza20.jpg",
+    image: "poze/poza20.jpg",
     description: "Tu uitându-te la cartea de colorat la care tipa 'Ei hai, nu colorez eu, nu am ce face sau ce?.'  și cine până la urmă colorase numa?😂❤️"
   },
   {
-    image: "../poze/poza21.jpg",
+    image: "poze/poza21.jpg",
     description: "Florile mele preferate de la tine și singurele care ți s-au primit ca surpriză chiar.💕"
   },
   {
-    image: "../poze/poza22.jpg",
+    image: "poze/poza22.jpg",
     description: "Cum te uitai la mine, când ți-am spus că nu îmi plac sprâncenele mele.😭"
   },
   {
-    image: "../poze/poza23.jpg",
+    image: "poze/poza23.jpg",
     description: "Tu după ce mă enervezi și vii să mă împaci.Da mi-o placut kinderulll taree și era cu Stella, zâna mea preferată.😭❤️"
   },
   {
-    image: "../poze/poza24.jpg",
+    image: "poze/poza24.jpg",
     description: "Prima dată când ai avut dreptate.Nu vroiam să incerc, dar mi-am luat pentru că sushi nu mai era și o fost așa bunee că după numa deaistea mai vroiam.🍣"
   },
   {
-    image: "../poze/poza25.jpg",
+    image: "poze/poza25.jpg",
     description: "Picnic iar.Sushi-Noi-Film(a treia parte terminat de data asta).😅"
   },
   {
-    image: "../poze/poza26.jpg",
+    image: "poze/poza26.jpg",
     description: "Ai venit la mine după ce mâncasem la Corso și ne-am uitat la un film(jumate), tot în ziua asta mă supărasem ca credeam că nu îți mai place de mine.😂❤️"
   },
   {
-    image: "../poze/poza27.jpg",
+    image: "poze/poza27.jpg",
     description: "Pozele de la aniversarea de un an...💑"
   },
   {
-    image: "../poze/poza28.jpg",
+    image: "poze/poza28.jpg",
     description: "Corso.😍😍😍"
   },
   {
-    image: "../poze/poza29.jpg",
+    image: "poze/poza29.jpg",
     description: "Poza mea preferată de la colegiu...👀💜"
   },
   {
-    image: "../poze/poza30.jpg",
+    image: "poze/poza30.jpg",
     description: "Tu foarte bucuros la cumpărături, când ți-am zis zâmbește oleacă.😂"
   },
   {
-    image: "../poze/poza31.jpg",
+    image: "poze/poza31.jpg",
     description: "Ziua ta.Ador poza asta.💞"
   },
   {
-    image: "../poze/poza32.jpg",
+    image: "poze/poza32.jpg",
     description: "Când ai venit la mine și te jucai cu Luca în play stacion.✨"
   },
   {
-    image: "../poze/poza33.jpg",
+    image: "poze/poza33.jpg",
     description: "Poze făcute de Alexandra la colegiu.💞"
   },
   {
-    image: "../poze/poza35.jpg",
+    image: "poze/poza35.jpg",
     description: "Summerfest 🍹 Mereu as țin minte videoul cela cu tine și Alina.😂"
   },
   {
-    image: "../poze/poza36.jpg",
+    image: "poze/poza36.jpg",
     description: "Noi după ce ne-am certat 1h și deam tăt ii bine.Te iubesc.💗"
   },
   {
-    image: "../poze/poza37.jpg",
+    image: "poze/poza37.jpg",
     description: "Poză foarte drăguță de la scaunu nostru, pe care l-o scos...și câte amintiri sunt acolo...🥹🥹🥹"
   },
   {
-    image: "../poze/poza38.jpg",
+    image: "poze/poza38.jpg",
     description: "Parcul cela unde umblasem toatî vara...💗"
   }
 ];
