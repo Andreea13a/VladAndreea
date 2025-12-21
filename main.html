@@ -5,6 +5,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pagina Noastră 💖</title>
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/audio.css">
 </head>
 <body>
 
@@ -31,7 +32,7 @@
 
       <main class="main-area">
         <div class="photo-section">
-          <img src="poza_noastra.jpg" alt="Noi doi" class="main-photo">
+          <img src="poze/poza_noastra.jpg" alt="Noi doi" class="main-photo">
           <p class="photo-date">06.09.2025 💖</p>
         </div>
 
@@ -132,6 +133,172 @@
         </div>
       </div>
 
+
+    <!-- SECȚIUNEA CU PLAYERELE MUZICALE -->
+<section class="music-section">
+  <h2>🎵 Melodiile Noastre Speciale</h2>
+  
+  <div class="music-players-container">
+    
+  <!-- PLAYER 1 -->
+<div class="music-player">
+  <div class="player-header">
+    <i class="player-icon fas fa-heart"></i>
+    <span class="player-title">Melodia Noastră</span>
+  </div>
+  
+  <img src="poze/danseaza amandoi.jpg" alt="Dansează amândoi - Nicole Cherry" class="album-cover">
+  
+  <div class="player-info">
+    <h3 class="song-title">Dansează amândoi</h3>
+    <p class="song-artist">Nicole Cherry</p>
+    <p class="song-description">Cântecul pe care m-ai sărutat prima dată.(Momentul 03:03 din piesă)</p>
+    
+    <!-- BUTON SINGUR DE START/PAUSE/STOP -->
+    <div class="single-button-container">
+      <button class="control-btn start-btn" title="Start">
+        <i class="fas fa-play"></i>
+        <span class="btn-text">Start</span>
+      </button>
+      <button class="control-btn pause-btn" title="Pause" disabled>
+        <i class="fas fa-pause"></i>
+        <span class="btn-text">Pause</span>
+      </button>
+      <button class="control-btn stop-btn" title="Stop" disabled>
+        <i class="fas fa-stop"></i>
+        <span class="btn-text">Stop</span>
+      </button>
+    </div>
+  </div>
+  
+  <div class="simple-progress">
+    <div class="progress-time">
+      <div class="time-container">
+        <span class="time-label">Timp:</span>
+        <span class="current-time">0:00</span>
+        <span class="time-separator">/</span>
+        <span class="total-time">0:00</span>
+      </div>
+    </div>
+    
+    <div class="progress-bar">
+      <div class="progress-fill"></div>
+    </div>
+  </div>
+  
+  <audio class="audio-element" preload="metadata">
+    <source src="audio/dansează amândoi.mp3" type="audio/mpeg">
+    Browser-ul tău nu suportă elementul audio.
+  </audio>
+</div> <!-- AICI SE ÎNCHIDE music-player -->
+   <!-- PLAYER 2 -->
+<div class="music-player">
+  <div class="player-header">
+    <i class="player-icon fas fa-hands"></i>
+    <span class="player-title">Pentru Tine</span>
+  </div>
+  
+  <img src="poze/sunsetz.jpg" alt="At My Worst - Pink Sweat$" class="album-cover">
+  
+  <div class="player-info">
+    <h3 class="song-title">Sunzetz</h3>
+    <p class="song-artist">Cigarettz after sex</p>
+    <p class="song-description">Cântecul cu care te-am asociat eu când încă abia vorbeam(și mi-ai spus că dacă cântecul este așa lent, liniștit înseamnă că mă simt în siguranță cu tine).</p>
+    
+    <!-- BUTON SINGUR DE START/PAUSE/STOP -->
+    <div class="single-button-container">
+      <button class="control-btn start-btn" title="Start">
+        <i class="fas fa-play"></i>
+        <span class="btn-text">Start</span>
+      </button>
+      <button class="control-btn pause-btn" title="Pause" disabled>
+        <i class="fas fa-pause"></i>
+        <span class="btn-text">Pause</span>
+      </button>
+      <button class="control-btn stop-btn" title="Stop" disabled>
+        <i class="fas fa-stop"></i>
+        <span class="btn-text">Stop</span>
+      </button>
+    </div>
+  </div>
+  
+  <div class="simple-progress">
+    <div class="progress-time">
+      <div class="time-container">
+        <span class="time-label">Timp:</span>
+        <span class="current-time">0:00</span>
+        <span class="time-separator">/</span>
+        <span class="total-time">2:50</span>
+      </div>
+    </div>
+    
+    <div class="progress-bar">
+      <div class="progress-fill"></div>
+    </div>
+  </div>
+  
+  <audio class="audio-element" preload="metadata">
+    <source src="audio/Cigarettes After Sex - Sunsetz.mp3" type="audio/mpeg">
+    Browser-ul tău nu suportă elementul audio.
+  </audio>
+</div>
+
+<!-- PLAYER 3 -->
+<div class="music-player">
+  <div class="player-header">
+    <i class="player-icon fas fa-star"></i>
+    <span class="player-title">Pentru mine</span>
+  </div>
+  
+  <img src="poze/victima.jpg" alt="I Choose You - Alessia Cara" class="album-cover">
+  
+  <div class="player-info">
+    <h3 class="song-title">Victima</h3>
+    <p class="song-artist">Carla's Dreams</p>
+    <p class="song-description">Cântecul cu care m-ai asociat tu.</p>
+    
+    <!-- BUTON SINGUR DE START/PAUSE/STOP -->
+    <div class="single-button-container">
+      <button class="control-btn start-btn" title="Start">
+        <i class="fas fa-play"></i>
+        <span class="btn-text">Start</span>
+      </button>
+      <button class="control-btn pause-btn" title="Pause" disabled>
+        <i class="fas fa-pause"></i>
+        <span class="btn-text">Pause</span>
+      </button>
+      <button class="control-btn stop-btn" title="Stop" disabled>
+        <i class="fas fa-stop"></i>
+        <span class="btn-text">Stop</span>
+      </button>
+    </div>
+  </div>
+  
+  <div class="simple-progress">
+    <div class="progress-time">
+      <div class="time-container">
+        <span class="time-label">Timp:</span>
+        <span class="current-time">0:00</span>
+        <span class="time-separator">/</span>
+        <span class="total-time">3:37</span>
+      </div>
+    </div>
+    
+    <div class="progress-bar">
+      <div class="progress-fill"></div>
+    </div>
+  </div>
+  
+  <audio class="audio-element" preload="metadata">
+    <source src="audio/Carla's Dreams - Victima.mp3" type="audio/mpeg">
+    Browser-ul tău nu suportă elementul audio.
+  </audio>
+</div>
+    
+  </div>
+  
+</section>
+
     </div>
   </div> <!-- Închide .main-scroll-container -->
 
@@ -144,7 +311,7 @@
   <script src="javascript/love-reasons.js"></script>
   <!-- ADAUGĂ FIȘIERUL PENTRU GENERATORUL DE POZE -->
   <script src="javascript/photo-generator.js"></script>
-  
+  <script src="javascript/audio.js"></script>
   <script>
 let lastScrollTop = 0;
 const header = document.querySelector('.site-header');

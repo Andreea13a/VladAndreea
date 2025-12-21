@@ -1,0 +1,503 @@
+/* ============================================
+   PLAYERE AUDIO - RESPONSIVE PENTRU AMBELE DISPOZITIVE
+   ============================================ */
+
+/* SECȚIUNEA AUDIO */
+.music-section {
+  margin-top: 50px;
+  padding: 30px 20px;
+  width: 100%;
+  background: linear-gradient(135deg, #fff0f8 0%, #ffe6f2 100%);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(255, 102, 178, 0.15);
+  border: 2px solid #ffccdd;
+  box-sizing: border-box;
+}
+
+.music-section h2 {
+  text-align: center;
+  color: #ff3399;
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 0px #ffccdd;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* CONTAINER PENTRU PLAYERE - RESPONSIVE */
+.music-players-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 25px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* PLAYER INDIVIDUAL - RESPONSIVE */
+.music-player {
+  flex: 1;
+  min-width: 300px; /* MINIM PENTRU MOBILE */
+  max-width: 400px; /* MAXIM PENTRU DESKTOP */
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(255, 102, 178, 0.2);
+  transition: all 0.3s ease;
+  border: 2px solid #ffccdd;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.music-player:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(255, 102, 178, 0.3);
+}
+
+/* HEADER PLAYER */
+.player-header {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background: linear-gradient(90deg, #ff66b2, #ff80bf);
+  border-bottom: 2px solid #ffccdd;
+  flex-shrink: 0;
+}
+
+.player-icon {
+  font-size: 20px;
+  margin-right: 12px;
+  color: white;
+}
+
+.player-title {
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+/* COVER ALBUM */
+.album-cover {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #ffccdd;
+  flex-shrink: 0;
+}
+
+/* INFORMAȚII MELODIE */
+.player-info {
+  padding: 20px;
+  text-align: center;
+  background: #fff9fc;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 180px;
+}
+
+.song-title {
+  color: #ff3399;
+  font-size: 22px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.song-artist {
+  color: #ff66b2;
+  font-size: 16px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.song-description {
+  color: #ff6699;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  font-style: italic;
+  flex-grow: 1;
+  overflow: auto;
+  max-height: 60px;
+}
+
+/* BUTOANE ROZ ÎN ACEEAȘI LINIE */
+.single-button-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 15px 0 10px 0;
+  flex-shrink: 0;
+}
+
+.control-btn {
+  background: linear-gradient(135deg, #ff66b2, #ff80bf);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 90px;
+  box-shadow: 0 4px 12px rgba(255, 102, 178, 0.3);
+  opacity: 0.9;
+}
+
+.control-btn:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 102, 178, 0.4);
+  opacity: 1;
+  background: linear-gradient(135deg, #ff3399, #ff66b2);
+}
+
+.control-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background: linear-gradient(135deg, #ffb3d9, #ffccdd);
+}
+
+.control-btn.active {
+  opacity: 1;
+  box-shadow: 0 6px 16px rgba(255, 51, 153, 0.5);
+  background: linear-gradient(135deg, #ff3399, #ff66b2);
+}
+
+/* TOATE BUTOANELE ROZ - ACELAȘI STIL */
+.start-btn, .pause-btn, .stop-btn {
+  background: linear-gradient(135deg, #ff66b2, #ff80bf);
+}
+
+.start-btn.active, .pause-btn.active, .stop-btn.active {
+  background: linear-gradient(135deg, #ff3399, #ff66b2);
+}
+
+.control-btn i {
+  font-size: 15px;
+}
+
+.btn-text {
+  font-size: 15px;
+}
+
+/* PROGRESS BAR - VIZIBIL PENTRU TOATE DISPOZITIVELE */
+.simple-progress {
+  padding: 20px;
+  background: white;
+  border-top: 2px solid #ffe6f2;
+  flex-shrink: 0;
+}
+
+.progress-time {
+  margin-bottom: 12px;
+}
+
+.time-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #ff3399;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.time-label {
+  color: #ff99cc;
+  font-weight: 500;
+}
+
+.current-time {
+  color: #ff3399;
+  font-weight: 800;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 1px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.time-separator {
+  color: #ffccdd;
+  font-weight: 800;
+}
+
+.total-time {
+  color: #ff66b2;
+  font-weight: 600;
+  min-width: 45px;
+  text-align: center;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #ffe6f2;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 15px 0;
+  border: 2px solid #ffccdd;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff3399, #ff66b2);
+  width: 0%;
+  border-radius: 8px;
+  transition: width 0.1s linear;
+  position: relative;
+  display: block !important; /* FORȚEAZĂ AFIȘAREA */
+  visibility: visible !important;
+}
+
+.progress-fill::after {
+  content: '💖';
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 51, 153, 0.4);
+  border: 2px solid #ff3399;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* INSTRUCȚIUNI */
+.music-instructions {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, #fff0f2, #ffe6ee);
+  border-radius: 15px;
+  border: 2px dashed #ff99cc;
+}
+
+.music-instructions p {
+  color: #ff3399;
+  font-size: 16px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.music-instructions i {
+  color: #ff66b2;
+  margin-right: 8px;
+}
+
+/* ANIMAȚII PENTRU PLAYER ACTIV */
+.music-player.active {
+  border-color: #ff3399;
+  box-shadow: 0 0 20px rgba(255, 51, 153, 0.3);
+}
+
+.music-player.active .progress-fill {
+  background: linear-gradient(
+    90deg,
+    #ff0080,
+    #ff3399,
+    #ff66b2,
+    #ff99cc
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ============================================
+   MEDIA QUERIES PENTRU RESPONSIVE DESIGN
+   ============================================ */
+
+/* DESKTOP (ecrane mari) */
+@media (min-width: 1200px) {
+  .music-players-container {
+    flex-wrap: nowrap; /* TOATE PE ACELAȘI RÂND PE DESKTOP */
+    justify-content: space-between;
+    overflow-x: visible;
+  }
+  
+  .music-player {
+    flex: 1;
+    min-width: 350px;
+    max-width: 380px;
+  }
+}
+
+/* TABLETĂ (ecrane medii) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .music-players-container {
+    flex-wrap: wrap; /* SE ÎNFĂȘOARĂ PE TABLETĂ */
+    justify-content: center;
+  }
+  
+  .music-player {
+    flex: 0 0 calc(50% - 25px); /* DOUĂ PE RÂND */
+    max-width: calc(50% - 25px);
+  }
+  
+  .album-cover {
+    height: 180px;
+  }
+}
+
+/* TELEFON (ecrane mici) */
+@media (max-width: 767px) {
+  .music-section {
+    padding: 20px 15px;
+    margin-top: 40px;
+  }
+  
+  .music-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  
+  .music-players-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  .music-player {
+    width: 100%;
+    max-width: 400px;
+    min-width: unset;
+  }
+  
+  .player-header {
+    padding: 12px 15px;
+  }
+  
+  .album-cover {
+    height: 180px;
+  }
+  
+  .player-info {
+    padding: 15px;
+    min-height: 160px;
+  }
+  
+  .song-title {
+    font-size: 20px;
+  }
+  
+  .song-artist {
+    font-size: 15px;
+  }
+  
+  .single-button-container {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .control-btn {
+    padding: 10px 18px;
+    min-width: 85px;
+    font-size: 14px;
+    flex: 1;
+  }
+  
+  .simple-progress {
+    padding: 15px;
+  }
+  
+  .time-container {
+    font-size: 14px;
+  }
+  
+  .progress-bar {
+    height: 10px;
+  }
+  
+  .progress-fill::after {
+    width: 20px;
+    height: 20px;
+    right: -10px;
+  }
+}
+
+/* TELEFONE FOARTE MICI */
+@media (max-width: 480px) {
+  .single-button-container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  
+  .control-btn {
+    padding: 8px 15px;
+    min-width: 70px;
+    font-size: 13px;
+  }
+  
+  .btn-text {
+    font-size: 13px;
+  }
+  
+  .control-btn i {
+    font-size: 13px;
+  }
+  
+  .progress-fill::after {
+    content: '❤️';
+    width: 18px;
+    height: 18px;
+    right: -9px;
+    font-size: 10px;
+  }
+}
+
+/* FIX PENTRU PROGRESS BAR PE DESKTOP */
+@media (min-width: 768px) {
+  .progress-fill {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .progress-bar {
+    background-color: #ffe6f2 !important;
+    border: 2px solid #ffccdd !important;
+  }
+}
+
+/* SCROLLBAR PERSONALIZAT (doar când e nevoie) */
+.music-players-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.music-players-container::-webkit-scrollbar-track {
+  background: #ffe6f2;
+  border-radius: 10px;
+}
+
+.music-players-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #ff66b2, #ff3399);
+  border-radius: 10px;
+}
+
+.music-players-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #ff3399, #ff66b2);
+}

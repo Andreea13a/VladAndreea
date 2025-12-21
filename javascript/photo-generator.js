@@ -68,7 +68,7 @@ const photoMemories = [
   },
   {
     image: "poze/poza19.jpg",
-    description: "Gentelmen.❤️"
+    description: "Gentelman.❤️"
   },
   {
     image: "poze/poza20.jpg",
@@ -136,8 +136,88 @@ const photoMemories = [
   },
   {
     image: "poze/poza38.jpg",
-    description: "Parcul cela unde umblasem toatî vara...💗"
-  }
+    description: "Parcul cela unde umblasem toată vara...💗"
+  },
+  {
+    image: "poze/poza39.jpg",
+    description: "Fotograful meu drăgălaș..📸"
+  },
+  {
+    image: "poze/poza40.jpg",
+    description: "Când mi-ai spus că dacă vii așa la mine, păi nu a să rezist...😂❤️"
+  },
+  {
+    image: "poze/poza41.jpg",
+    description: "Când ieșisem cu Teo în seara ceea...🥰"
+  },
+  {
+    image: "poze/poza42.jpg",
+    description: "Iar cu Teo aici cînd i-ai dat și lui ecler și ai spus că nu a să ii fie nimic.😂❤️"
+  },
+  {
+    image: "poze/poza43.jpg",
+    description: "Florile de 8 martie (10 martie la noi s-a primit).🌸"
+  },
+  {
+    image: "poze/poza44.jpg",
+    description: "Pur simplu noi împreună.💕"
+  },
+  {
+    image: "poze/poza45.jpg",
+    description: "Tu din nou gentelman și rochia asta care îți plăcuse taree.😍"
+  },
+  {
+    image: "poze/poza46.jpg",
+    description: "Iar scaunul nostru...❤️"
+  },
+  {
+    image: "poze/poza47.jpg",
+    description: "Primele flori fără motiv..🌹"
+  },
+  {
+    image: "poze/poza48.jpg",
+    description: "Când am vorbit să ne îmbrăcăm matching, ambii în alb.🤍"
+  },
+  {
+    image: "poze/poza49.jpg",
+    description: "Când spusesei că o să mergem împreună să imi iai o jucărie și încă întârziasei în ziua ceaa și crezusem că ai uitat iar și am început a plânge în parc și nu știai de ce, și țin minte și acum când ai înțeles de ce plângeam, m-ai liniștit și am fost și mi-ai luat 2 până la urmă..😭❤️ "
+  },
+  {
+    image: "poze/poza50.jpg",
+    description: "Când ai propus TU să facem poză aici..😂❤️"
+  },
+  {
+    image: "poze/poza51.jpg",
+    description: "Cum spune mama: 'Altarul de la Vlad'.😂❤️"
+  },
+  {
+    image: "poze/poza52.jpg",
+    description: "Tortul pe care îl făcusem pentru aniversarea noastră.🎂"
+  },
+  {
+    image: "poze/poza53.jpg",
+    description: "Când ne-a făcut iar poze, de data asta Ion, când ne băteam iar ceva.😂"
+  },
+  {
+    image: "poze/poza54.jpg",
+    description: "Poza mea preferată de la aniversarea noastră.💕"
+  },
+  {
+    image: "poze/poza55.jpg",
+    description: "Florile de 1 an.🌷"
+  },
+  {
+    image: "poze/poza56.jpg",
+    description: "Când în sfârșitttt am fost la patinoarrr anul ăsta.Tot anul trecut o țineai cu 'Eu dacă am spus, păi as mergem chiar dacă mă tem' și până la urmă se inchisese patinoarul și nu fusesem nicăieri.⛸️"
+  },
+  {
+    image: "poze/poza57.jpg",
+    description: "Încă o poză de la ședința foto de la aniversarea noastră.💕"
+  },
+  {
+    image: "poze/poza58.jpg",
+    description: "De la cinema, când am fost cu Ion și Mihaela să vedem filmul Zootropolis 2.🍿"
+  },
 ];
 
 const randomPhoto = document.getElementById('randomPhoto');
