@@ -1,3 +1,7 @@
+/* ============================================
+   CSS COMPLET ACTUALIZAT - DESKTOP & TELEFON
+   ============================================ */
+
 /* RESET */
 * {
   margin: 0;
@@ -10,11 +14,10 @@ html, body {
   width: 100%;
   background-color: #fff0f5;
   font-family: 'Arial', sans-serif;
-  overflow-y: auto; /* ✅ PERMITE SCROLL VERTICAL */
-  overflow-x: hidden; /* ✅ ASCUNDE SCROLL ORIZONTAL */
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-/* STRUCTURĂ CU SCROLL */
 body {
   display: flex;
   flex-direction: column;
@@ -24,44 +27,64 @@ body {
 /* HEADER */
 .site-header {
   background-color: #ffcce6;
-  padding: 20px;
+  padding: 15px 20px;
   text-align: center;
-  position: relative;
+  position: fixed;
   top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(255, 102, 178, 0.2);
+  transition: top 0.3s ease;
 }
 
 .header-container h1 {
   color: #cc0066;
-  font-size: 2em;
+  font-size: 1.8rem;
   margin: 0;
+  text-shadow: 1px 1px 0px #ffccdd;
 }
 
-/* CONȚINUT PRINCIPAL CU SCROLL */
+/* CONTAINER PRINCIPAL CU SCROLL */
+.main-scroll-container {
+  margin-top: 70px;
+  flex: 1;
+  width: 100%;
+}
+
+/* CONȚINUT PRINCIPAL */
 .page-content {
   display: flex;
-  flex: 1;
-  min-height: 80vh;
+  min-height: 70vh;
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 30px;
 }
 
 /* SIDEBAR */
 .sidebar {
-  width: 250px;
-  background-color: #ffffff;
-  padding: 20px;
-  border-right: 2px solid #ffcce6;
+  width: 280px;
+  background: white;
+  padding: 25px 20px;
+  border-radius: 20px;
+  border: 2px solid #ffccdd;
+  box-shadow: 0 8px 25px rgba(255, 102, 178, 0.1);
   position: sticky;
-  top: 80px;
+  top: 90px;
   align-self: flex-start;
-  max-height: calc(100vh - 140px);
+  max-height: calc(100vh - 120px);
   overflow-y: auto;
+  flex-shrink: 0;
 }
 
 .sidebar h2 {
-  color: #cc0066;
-  margin-bottom: 20px;
+  color: #ff3399;
+  margin-bottom: 25px;
   text-align: center;
+  font-size: 1.5rem;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #ffccdd;
 }
 
 #event-list {
@@ -70,355 +93,401 @@ body {
 
 #event-list li {
   margin-bottom: 15px;
-  padding: 10px;
-  background-color: white;
-  border-radius: 8px;
-  border: 1px solid #ffcce6;
-  transition: transform 0.2s;
+  padding: 15px;
+  background: linear-gradient(135deg, #fff5f9, #ffebf3);
+  border-radius: 12px;
+  border: 1px solid #ffccdd;
+  transition: all 0.3s ease;
 }
 
 #event-list li:hover {
   transform: translateX(5px);
+  border-color: #ff66a3;
+  box-shadow: 0 5px 15px rgba(255, 102, 163, 0.2);
 }
 
 .event-name {
   display: block;
   font-weight: bold;
   color: #99004d;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  font-size: 1rem;
 }
 
 .countdown {
   color: #ff3399;
-  font-size: 0.9em;
+  font-size: 0.9rem;
   font-weight: bold;
 }
 
 /* MAIN AREA */
 .main-area {
   flex: 1;
-  padding: 20px;
-  display: flex;
-  gap: 40px;
-  justify-content: space-between;
-  align-items: flex-start;
-  min-height: 80vh;
-}
-
-/* POZA */
-.photo-section {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding-left: 80px;
-  margin-top: 50px;
+  gap: 30px;
+}
+
+/* POZA PRINCIPALĂ */
+.photo-section {
+  text-align: center;
+  background: linear-gradient(135deg, #fff5f9, #ffebf3);
+  border-radius: 20px;
+  padding: 25px;
+  border: 2px solid #ffccdd;
+  box-shadow: 0 10px 25px rgba(255, 102, 178, 0.15);
 }
 
 .main-photo {
-  width: 600px;
-  height: 450px;
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  max-height: 350px;
   border-radius: 15px;
-  border: 5px solid #ffcce6;
-  box-shadow: 0 5px 15px rgba(255, 51, 153, 0.3);
+  border: 3px solid #ff3399;
+  box-shadow: 0 15px 30px rgba(255, 51, 153, 0.2);
   object-fit: cover;
-  transition: transform 0.3s;
-}
-
-.main-photo:hover {
-  transform: scale(1.02);
+  margin: 0 auto;
+  display: block;
 }
 
 .photo-date {
+  display: inline-block;
   margin-top: 15px;
-  font-size: 1.3em;
-  color: #ff3399;
+  padding: 10px 25px;
+  background: linear-gradient(135deg, #ff66b2, #ff3399);
+  color: white;
+  border-radius: 25px;
+  font-size: 1.1rem;
   font-weight: bold;
-  text-align: center;
-  width: 600px;
+  box-shadow: 0 5px 15px rgba(255, 102, 178, 0.3);
 }
 
-/* GENERATOR */
+/* GENERATOR MESAJE */
 .generator-box {
-  width: 380px;
-  height: 380px;
   background: white;
-  border-radius: 15px;
+  border-radius: 20px;
   border: 3px solid #ff66a3;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 5px 15px rgba(255, 102, 163, 0.15);
-  margin-top: 50px;
-  margin-right: 50px;
-  position: sticky;
-  top: 100px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(255, 102, 178, 0.15);
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .generator-box h3 {
-  color: #cc0066;
-  margin: 0 0 20px 0;
-  font-size: 1.3em;
-  text-align: center;
-  width: 100%;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #ffcce6;
+  color: #ff3399;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #ffccdd;
 }
 
 .message-display {
   width: 100%;
   min-height: 150px;
   background: #fff9fc;
-  border-radius: 10px;
-  border: 2px solid #ffcce6;
-  padding: 15px;
+  border-radius: 15px;
+  border: 2px dashed #ff99cc;
+  padding: 20px;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  font-size: 1.1em;
-  color: #99004d;
+  font-size: 1.1rem;
+  color: #660033;
   line-height: 1.5;
-  overflow: hidden;
-  transition: all 0.3s;
+  font-style: italic;
 }
 
 #generateBtn {
   width: 100%;
-  padding: 12px;
-  background: #ff66a3;
+  padding: 14px;
+  background: linear-gradient(to right, #ff3399, #ff66b2);
   color: white;
   border: none;
-  border-radius: 8px;
-  font-size: 1em;
+  border-radius: 10px;
+  font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s;
-  margin-top: auto;
+  transition: all 0.3s ease;
+  margin-top: 10px;
 }
 
 #generateBtn:hover {
-  background: #ff3385;
+  background: linear-gradient(to right, #ff0066, #ff3399);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(255, 51, 153, 0.3);
+  box-shadow: 0 8px 20px rgba(255, 51, 153, 0.4);
 }
 
-/* CONȚINUT EXTRA MAI JOS */
+/* CONȚINUT EXTRA */
 .extra-content {
   width: 100%;
-  padding: 60px 40px;
+  padding: 40px 20px;
   background: linear-gradient(to bottom, #fff9fc, #ffe6f2);
   display: flex;
   flex-direction: column;
-  gap: 80px;
-}
-
-/* SECȚIUNI EXTRA */
-.memory-section,
-.messages-section,
-.gallery-section {
-  max-width: 1200px;
+  gap: 60px;
+  max-width: 1400px;
   margin: 0 auto;
-  width: 100%;
 }
 
 .extra-content h2 {
-  color: #cc0066;
-  font-size: 2.2em;
-  margin-bottom: 5px;
+  color: #ff3399;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
   text-align: center;
-  border-bottom: 3px solid #ffcce6;
-  padding-bottom: 15px;
+  text-shadow: 1px 1px 0px #ffccdd;
 }
 
-/* AMINTIRI - 3 CASETE PE ORIZONTALĂ */
+/* AMINTIRI - 3 PE RÂND */
 .memories-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* ✅ 3 CASETE UNA LÂNGĂ ALTA */
-  gap: 35px;
-  margin-top: 5px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 20px;
 }
 
 .memory-card {
   background: white;
-  padding: 35px 30px;
+  padding: 25px;
   border-radius: 20px;
-  border: 2px solid #ffcce6;
-  box-shadow: 0 8px 25px rgba(255, 51, 153, 0.1);
+  border: 2px solid #ffccdd;
+  box-shadow: 0 10px 25px rgba(255, 102, 178, 0.1);
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   height: 100%;
-  min-height: 280px;
 }
 
 .memory-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(255, 51, 153, 0.2);
+  box-shadow: 0 20px 40px rgba(255, 102, 178, 0.2);
   border-color: #ff66a3;
 }
 
 .memory-icon {
-  font-size: 2.8em;
-  margin-bottom: 25px;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
 }
 
 .memory-card h4 {
   color: #ff3399;
-  font-size: 1.5em;
-  margin-bottom: 20px;
-  padding-bottom: 15px;
-  border-bottom: 2px dashed #ffcce6;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px dashed #ffccdd;
   width: 100%;
 }
 
-.memory-card p {
+.memory-content p {
   color: #99004d;
-  font-size: 1.15em;
-  line-height: 1.6;
-  margin-bottom: 25px;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
   flex: 1;
 }
 
 .memory-date {
   color: #ff66a3;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 0.9rem;
   padding-top: 15px;
-  border-top: 2px dashed #ffcce6;
+  border-top: 2px dashed #ffccdd;
   width: 100%;
+}
+
+/* GENERATOARE COMPACTE */
+.compact-generators-section {
+  margin: 40px auto;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.compact-generators-section h2 {
+  text-align: center;
+  color: #ff3399;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 0px #ffccdd;
+}
+
+.compact-generators-container {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.compact-generator {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.compact-generator-card {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #ff66a3;
+}
+
+.compact-generator-card:hover {
+  transform: translateY(-5px);
+}
+
+.compact-generator-card h3 {
+  color: #ff3399;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.compact-subtitle {
+  text-align: center;
+  font-style: italic;
+  color: #ff6699;
+  margin: 0 0 20px 0;
+  font-size: 1rem;
+  padding-bottom: 15px;
+  border-bottom: 2px dashed #ff99cc;
+}
+
+/* AFIȘARE MESAJE */
+.compact-message-display {
+  background: #fff9fc;
+  border: 2px dashed #ff99cc;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #333;
+  text-align: center;
+  min-height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-}
-
-/* MESAJE - 3 CASETE PE ORIZONTALĂ */
-.messages-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* ✅ 3 CASETE UNA LÂNGĂ ALTA */
-  gap: 35px;
-  margin-top: 30px;
-}
-
-.message-card {
-  background: white;
-  padding: 35px 30px;
-  border-radius: 20px;
-  border: 2px solid #ffcce6;
-  box-shadow: 0 8px 25px rgba(255, 51, 153, 0.1);
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  height: 100%;
-  min-height: 280px;
-}
-
-.message-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(255, 51, 153, 0.2);
-  border-color: #ff66a3;
-}
-
-.message-icon {
-  font-size: 2.8em;
-  margin-bottom: 25px;
-}
-
-.message-card h4 {
-  color: #ff3399;
-  font-size: 1.5em;
-  margin-bottom: 20px;
-  padding-bottom: 15px;
-  border-bottom: 2px dashed #ffcce6;
-  width: 100%;
-}
-
-.message-card p {
-  color: #99004d;
-  font-size: 1.15em;
-  line-height: 1.6;
-  margin-bottom: 25px;
-  flex: 1;
   font-style: italic;
 }
 
-.message-signature {
-  color: #ff66a3;
-  font-weight: bold;
-  font-size: 1.1em;
-  padding-top: 15px;
-  border-top: 2px dashed #ffcce6;
+/* CONTAINER POZE */
+.compact-photo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px 0;
+  flex-grow: 1;
+}
+
+.compact-photo-wrapper {
   width: 100%;
+  height: 250px;
+  background: linear-gradient(135deg, #fff0f7, #ffe6f2);
+  border: 3px dashed #ff99cc;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.1);
 }
 
-/* CULORI DIFERITE PENTRU CASETE */
-.memory-card:nth-child(1) {
-  background: linear-gradient(145deg, #fff0f7, #ffe6f2);
-  border-color: #ff99cc;
+.compact-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: none;
+  border-radius: 12px;
 }
 
-.memory-card:nth-child(2) {
-  background: linear-gradient(145deg, #f9f0ff, #f0e6ff);
-  border-color: #cc99ff;
+.compact-photo-placeholder {
+  font-size: 3rem;
+  color: #ff99cc;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
-.memory-card:nth-child(3) {
-  background: linear-gradient(145deg, #f0f9ff, #e6f2ff);
-  border-color: #99ccff;
+.compact-photo.loaded {
+  display: block;
 }
 
-.message-card:nth-child(1) {
-  background: linear-gradient(145deg, #fff7f0, #ffe6cc);
-  border-color: #ffcc99;
+/* DESCRIERE POZĂ */
+.compact-description-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
 
-.message-card:nth-child(2) {
-  background: linear-gradient(145deg, #f0fff4, #ccffdd);
-  border-color: #99ffbb;
+.compact-photo-description {
+  background: #fff9fc;
+  border: 2px dashed #ff99cc;
+  border-radius: 15px;
+  padding: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
 }
 
-.message-card:nth-child(3) {
-  background: linear-gradient(145deg, #f0f7ff, #cce0ff);
-  border-color: #99bbff;
+/* BUTOANE GENERATOARE */
+.compact-button {
+  background: linear-gradient(to right, #ff3399, #ff66b2);
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  box-shadow: 0 5px 15px rgba(255, 51, 153, 0.25);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 300px;
 }
 
-
+.compact-button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(255, 51, 153, 0.35);
+}
 
 /* FOOTER */
 .site-footer {
   background-color: #ffcce6;
-  padding: 30px 15px;
+  padding: 25px;
   text-align: center;
-  margin-top: auto;
+  margin-top: 50px;
   border-top: 4px solid #ff99cc;
 }
 
 .site-footer p {
   color: #ff3399;
-  font-size: 1.3em;
+  font-size: 1.2rem;
   margin: 0;
   font-weight: bold;
-}
-
-/* ANIMAȚII */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.memory-card, .message-card, .coming-soon {
-  animation: fadeIn 0.8s ease-out;
 }
 
 /* SCROLLBAR PERSONALIZAT */
@@ -440,1591 +509,289 @@ body {
   background: #ff66a3;
 }
 
-/* RESPONSIVE */
-@media (max-width: 1200px) {
-  .main-area {
-    flex-direction: column;
-    align-items: center;
-    gap: 60px;
-  }
-  
-  .photo-section {
-    padding-left: 0;
-    align-items: center;
-  }
-  
-  .generator-box {
-    margin-right: 0;
-    position: static;
-  }
-  
-  .main-photo,
-  .photo-date {
-    width: 90%;
-    max-width: 500px;
-  }
-  
-  .main-photo {
-    height: 350px;
-  }
-  
-  .memories-grid,
-  .messages-grid {
-    grid-template-columns: repeat(2, 1fr); /* ✅ 2 COLUMNE PE TABLETE */
-  }
-}
+/* ============================================
+   MEDIA QUERIES PENTRU TELEFON
+   ============================================ */
 
-@media (max-width: 768px) {
+/* TABLETĂ (768px-991px) */
+@media (max-width: 991px) {
   .page-content {
     flex-direction: column;
+    padding: 15px;
   }
   
   .sidebar {
     width: 100%;
     position: static;
     max-height: none;
-    border-right: none;
-    border-bottom: 2px solid #ffcce6;
+    margin-bottom: 30px;
   }
   
-  .memories-grid,
-  .messages-grid {
-    grid-template-columns: 1fr; /* ✅ 1 COLUMN PE TELEFON */
-    gap: 25px;
+  .memories-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
   
-  .extra-content {
-    padding: 40px 20px;
-    gap: 50px;
-  }
-  
-  .generator-box {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    min-height: 350px;
-  }
-  
-  .memory-card,
-  .message-card {
-    padding: 25px 20px;
-    min-height: 250px;
-  }
-  
-  .extra-content h2 {
-    font-size: 1.8em;
-  }
-}
-/* === STILURI PENTRU GENERATORUL DE MOTIVE === */
-
-/* Stiluri pentru subtitlul dedesubtul titlului "Motive pentru care te iubesc" */
-.motive-subtitle {
-  text-align: center;
-  font-style: italic;
-  color: #ff6699;
-  margin: -10px 0 25px 0;
-  font-size: 16px;
-  padding: 0 20px 15px 20px;
-  border-bottom: 2px dotted #ff99cc;
-  text-shadow: 0.5px 0.5px 2px rgba(0,0,0,0.1);
-  font-weight: 500;
-  letter-spacing: 0.3px;
-  line-height: 1.5;
-}
-
-/* Stiluri pentru containerul cu motive de iubire */
-.love-reasons-container {
-  margin: 60px auto;
-  max-width: 600px;
-  padding: 0 20px;
-}
-
-.centered-generator {
-  text-align: center;
-  background: linear-gradient(135deg, #ffebf3, #ffe6f2);
-  border: 3px solid #ff66a3;
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.centered-generator:hover {
-  transform: translateY(-5px);
-}
-
-.centered-generator h3 {
-  color: #ff3399;
-  font-size: 28px;
-  margin-bottom: 10px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-}
-
-#generateLoveReasonBtn {
-  background: linear-gradient(to right, #ff3399, #ff66b2);
-  color: white;
-  border: none;
-  padding: 15px 35px;
-  border-radius: 50px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 20px;
-  box-shadow: 0 5px 15px rgba(255, 51, 153, 0.3);
-}
-
-#generateLoveReasonBtn:hover {
-  background: linear-gradient(to right, #ff0066, #ff3399);
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(255, 51, 153, 0.4);
-}
-
-#loveReasonDisplay {
-  min-height: 100px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 2px dashed #ff99cc;
-  border-radius: 15px;
-  padding: 25px;
-  margin: 25px 0;
-  font-size: 18px;
-  line-height: 1.6;
-  color: #660033;
-  font-style: italic;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* === GENERATORUL SIMPLIFICAT DE MOTIVE === */
-
-/* Containerul principal pentru generator */
-.love-reasons-container {
-  margin: 40px 0;
-  width: 380px;
-  float: left;
-  clear: both;
-  background: white;
-  border: 3px solid #ff66a3;
-  border-radius: 15px;
-  padding: 25px;
-  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.1);
-}
-
-/* Titlul principal */
-.centered-generator h3 {
-  color: #ff3399;
-  font-size: 24px;
-  margin-bottom: 8px;
-  text-align: center;
-}
-
-/* Subtitlul */
-.motive-subtitle {
-  text-align: center;
-  font-style: italic;
-  color: #ff6699;
-  margin: 0 0 20px 0;
-  font-size: 14px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #ffccdd;
-}
-
-/* Afișarea mesajului - SE VEDE ÎNTREGUL TEXT */
-#loveReasonDisplay {
-  background: #fff9fc;
-  border: 1px solid #ffccdd;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px 0;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
-  text-align: center;
-  min-height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  word-break: break-word; /* TEXTUL SE ÎMPARTE FRUMOS */
-  white-space: normal; /* TEXTUL SE AFIȘEAZĂ ÎN ÎNTREGIME */
-  overflow: visible; /* NICIUN SCROLL, SE VEDE TOT */
-}
-
-/* Butonul simplu și clar */
-#generateLoveReasonBtn {
-  background: #ff3399;
-  color: white;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  display: block;
-  margin: 20px auto 0 auto;
-  width: 100%;
-  max-width: 250px;
-}
-
-#generateLoveReasonBtn:hover {
-  background: #ff0066;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(255, 51, 153, 0.3);
-}
-
-/* === RESPONSIVE === */
-@media (max-width: 768px) {
-  .love-reasons-container {
-    width: 100%;
-    float: none;
-    margin: 30px auto;
-    max-width: 400px;
-    padding: 20px;
-  }
-  
-  .centered-generator h3 {
-    font-size: 22px;
-  }
-  
-  .motive-subtitle {
-    font-size: 13px;
-    margin-bottom: 15px;
-  }
-  
-  #loveReasonDisplay {
-    padding: 15px;
-    font-size: 15px;
-    min-height: 100px;
-  }
-  
-  #generateLoveReasonBtn {
-    padding: 10px 25px;
-    font-size: 15px;
-  }
-}
-
-/* Clearfix pentru float */
-.extra-content::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* === SECȚIUNEA DUBLĂ CU GENERATOARE === */
-.double-generators-section {
-  margin: 60px 0;
-  width: 100%;
-}
-
-.double-generators-section h2 {
-  text-align: center;
-  color: #ff3399;
-  font-size: 32px;
-  margin-bottom: 40px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-}
-
-.generators-container {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.generator-wrapper {
-  flex: 1;
-  min-width: 350px;
-  max-width: 500px;
-}
-/* === SECȚIUNEA GENERATOARELOR CENTRALE === */
-.center-generators-section {
-  margin: 60px auto;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.center-generators-section h2 {
-  text-align: center;
-  color: #ff3399;
-  font-size: 32px;
-  margin-bottom: 40px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-}
-
-.center-generators-container {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  align-items: center;
-}
-
-/* GENERATORUL DE MOTIVE ÎN MINEOC */
-.center-generator-box {
-  background: white;
-  border: 3px solid #ff66a3;
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-  width: 100%;
-  max-width: 600px;
-  text-align: center;
-}
-
-.center-generator-box:hover {
-  transform: translateY(-5px);
-}
-
-.center-generator-box h3 {
-  color: #ff3399;
-  font-size: 26px;
-  margin-bottom: 10px;
-}
-
-.center-generator-box .generator-subtitle {
-  color: #ff6699;
-  font-style: italic;
-  margin-bottom: 25px;
-  padding-bottom: 15px;
-  border-bottom: 2px dashed #ff99cc;
-  font-size: 16px;
-}
-
-/* === GENERATOARELE PE ACEAȘI LINIE === */
-.side-by-side-generators {
-  margin: 60px auto;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.side-by-side-generators h2 {
-  text-align: center;
-  color: #ff3399;
-  font-size: 32px;
-  margin-bottom: 40px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-}
-
-.generators-row {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-}
-
-.generator-column {
-  flex: 1;
-  min-width: 300px;
-  max-width: 550px;
-}
-
-/* CARDELE GENERATOARELOR */
-.generator-card {
-  background: white;
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  border: 3px solid;
-}
-
-.generator-card:hover {
-  transform: translateY(-5px);
-}
-
-.love-generator {
-  border-color: #ff66a3;
-}
-
-.photo-generator {
-  border-color: #66a3ff;
-}
-
-/* TITLURI GENERATOARE */
-.generator-card h3 {
-  color: #ff3399;
-  font-size: 24px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.photo-generator h3 {
-  color: #3366ff;
-}
-
-.generator-subtitle {
-  text-align: center;
-  font-style: italic;
-  color: #ff6699;
-  margin: 0 0 25px 0;
-  font-size: 15px;
-  padding-bottom: 15px;
-  border-bottom: 2px dashed #ff99cc;
-}
-
-.photo-generator .generator-subtitle {
-  color: #6699ff;
-  border-bottom-color: #99ccff;
-}
-
-/* AFIȘAREA MESAJELOR PENTRU MOTIVE */
-.love-generator .message-display {
-  background: #fff9fc;
-  border: 2px dashed #ff99cc;
-  border-radius: 15px;
-  padding: 25px;
-  margin: 20px 0;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-  text-align: center;
-  min-height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-}
-
-/* === GENERATOARELE PE ACEAȘI LINIE === */
-.generators-row-section {
-  margin: 60px auto;
-  width: 100%;
-  max-width: 1400px;
-  padding: 0 20px;
-}
-
-.generators-row-section h2 {
-  text-align: center;
-  color: #ff3399;
-  font-size: 32px;
-  margin-bottom: 50px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-}
-
-.generators-side-by-side {
-  display: flex;
-  gap: 40px;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-}
-
-/* CONTAINERE PENTRU AMBELE GENERATOARE */
-.love-generator-container {
-  flex: 1;
-  min-width: 350px;
-  max-width: 550px;
-}
-
-.photo-generator-container {
-  flex: 1;
-  min-width: 350px;
-  max-width: 700px; /* MAI LAT PENTRU POZE MARI */
-}
-
-/* CARDELE GENERATOARELOR */
-.generator-card {
-  background: white;
-  border-radius: 20px;
-  padding: 35px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  border: 3px solid;
-}
-
-.generator-card:hover {
-  transform: translateY(-5px);
-}
-
-.love-generator-card {
-  border-color: #ff66a3;
-}
-
-.photo-generator-card {
-  border-color: #66a3ff;
-}
-
-/* TITLURI GENERATOARE */
-.generator-card h3 {
-  color: #ff3399;
-  font-size: 26px;
-  margin-bottom: 12px;
-  text-align: center;
-}
-
-.photo-generator-card h3 {
-  color: #3366ff;
-}
-
-.generator-subtitle {
-  text-align: center;
-  font-style: italic;
-  color: #ff6699;
-  margin: 0 0 30px 0;
-  font-size: 16px;
-  padding-bottom: 15px;
-  border-bottom: 2px dashed #ff99cc;
-}
-
-.photo-generator-card .generator-subtitle {
-  color: #6699ff;
-  border-bottom-color: #99ccff;
-}
-
-/* AFIȘAREA MESAJELOR PENTRU MOTIVE (STÂNGA) */
-.love-message-display {
-  background: #fff9fc;
-  border: 2px dashed #ff99cc;
-  border-radius: 15px;
-  padding: 30px;
-  margin: 25px 0;
-  font-size: 17px;
-  line-height: 1.6;
-  color: #333;
-  text-align: center;
-  min-height: 220px; /* MAI ÎNALT */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-  font-style: italic;
-}
-
-/* === GENERATOARELE PARE UNUL LÂNGĂ ALTUL === */
-.paired-generators-section {
-  margin: 60px auto;
-  width: 100%;
-  max-width: 1300px;
-  padding: 0 20px;
-}
-
-.paired-generators-section h2 {
-  text-align: center;
-  color: #ff3399;
-  font-size: 32px;
-  margin-bottom: 50px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-}
-
-/* CONTAINER PENTRU AMBELE GENERATOARE UNUL LÂNGĂ ALTUL */
-.paired-generators-container {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: nowrap; /* FORȚEAZĂ să rămână pe aceeași linie */
-}
-
-/* STILURI COMUNE PENTRU AMBELE GENERATOARE */
-.paired-generator {
-  flex: 1;
-  min-width: 400px;
-  max-width: 600px;
-  display: flex; /* ADAUGĂ ASTA */
-}
-
-.paired-generator-card {
-  background: white;
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  border: 3px solid;
-  width: 100%; /* ADAUGĂ ASTA */
-  height: 650px; /* ÎNĂLȚIME FIXĂ PENTRU A FI EGALE */
-}
-
-.paired-generator-card:hover {
-  transform: translateY(-5px);
-}
-
-/* ADAUGĂ ACEST COD PENTRU A FORȚA ALINIEREA */
-@media (min-width: 993px) {
-  .paired-generators-container {
-    display: flex !important;
-    flex-direction: row !important;
-  }
-  
-  .paired-generator {
-    width: 48% !important; /* IMPARTE ECRANUL IN 2 */
-    float: left !important;
-    display: block !important;
-  }
-}
-
-/* TITLURI GENERATOARE */
-.paired-generator-card h3 {
-  color: #ff3399;
-  font-size: 26px;
-  margin-bottom: 12px;
-  text-align: center;
-}
-
-.photo-paired .paired-generator-card h3 {
-  color: #3366ff;
-}
-
-.paired-subtitle {
-  text-align: center;
-  font-style: italic;
-  color: #ff6699;
-  margin: 0 0 25px 0;
-  font-size: 16px;
-  padding-bottom: 15px;
-  border-bottom: 2px dashed #ff99cc;
-}
-
-.photo-paired .paired-subtitle {
-  color: #6699ff;
-  border-bottom-color: #99ccff;
-}
-
-/* AFIȘAREA MESAJELOR PENTRU MOTIVE (STÂNGA) */
-.paired-message-display {
-  background: #fff9fc;
-  border: 2px dashed #ff99cc;
-  border-radius: 15px;
-  padding: 30px;
-  margin: 20px 0;
-  font-size: 17px;
-  line-height: 1.6;
-  color: #333;
-  text-align: center;
-  min-height: 280px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-  font-style: italic;
-}
-
-/* === GENERATOARELE COMPACTE UNUL LÂNGĂ ALTUL === */
-.compact-generators-section {
-  margin: 50px auto;
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 20px;
-}
-
-.compact-generators-section h2 {
-  text-align: center;
-  color: #ff3399;
-  font-size: 28px;
-  margin-bottom: 40px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-}
-
-/* CONTAINER PENTRU AMBELE GENERATOARE UNUL LÂNGĂ ALTUL */
-.compact-generators-container {
-  display: flex;
-  gap: 25px;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: nowrap;
-}
-
-/* STILURI COMUNE PENTRU AMBELE GENERATOARE COMPACTE */
-.compact-generator {
-  flex: 1;
-  min-width: 320px; /* MAI MIC */
-  max-width: 480px; /* MAI MIC */
-}
-
-.compact-generator-card {
-  background: white;
-  border-radius: 18px;
-  padding: 25px; /* MAI MIC */
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  border: 3px solid #ff66a3; /* AMBELE ROZ */
-  height: 580px; /* MAI SCUND */
-}
-
-.compact-generator-card:hover {
-  transform: translateY(-3px);
-}
-
-/* TITLURI GENERATOARE COMPACTE */
-.compact-generator-card h3 {
-  color: #ff3399;
-  font-size: 22px; /* MAI MIC */
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.compact-subtitle {
-  text-align: center;
-  font-style: italic;
-  color: #ff6699;
-  margin: 0 0 20px 0;
-  font-size: 14px; /* MAI MIC */
-  padding-bottom: 12px;
-  border-bottom: 2px dashed #ff99cc;
-}
-
-/* AFIȘAREA MESAJELOR PENTRU MOTIVE (STÂNGA) */
-.compact-message-display {
-  background: #fff9fc;
-  border: 2px dashed #ff99cc;
-  border-radius: 12px;
-  padding: 20px; /* MAI MIC */
-  margin: 15px 0;
-  font-size: 15px; /* MAI MIC */
-  line-height: 1.5;
-  color: #333;
-  text-align: center;
-  min-height: 180px; /* MAI SCUND */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-  font-style: italic;
-}
-/* === GENERATOARELE COMPACTE UNUL LÂNGĂ ALTUL === */
-.compact-generators-section {
-  margin: 50px auto;
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 20px;
-}
-
-.compact-generators-section h2 {
-  text-align: center;
-  color: #ff3399;
-  font-size: 28px;
-  margin-bottom: 40px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-}
-
-/* CONTAINER PENTRU AMBELE GENERATOARE UNUL LÂNGĂ ALTUL */
-.compact-generators-container {
-  display: flex;
-  gap: 25px;
-  justify-content: center;
-  align-items: stretch;
-}
-
-/* STILURI COMUNE PENTRU AMBELE GENERATOARE COMPACTE */
-.compact-generator {
-  flex: 1;
-  min-width: 320px;
-  max-width: 480px;
-}
-
-.compact-generator-card {
-  background: white;
-  border-radius: 18px;
-  padding: 25px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  border: 3px solid #ff66a3;
-  height: 650px; /* MAI ÎNALT PENTRU PĂTRAT */
-}
-
-.compact-generator-card:hover {
-  transform: translateY(-3px);
-}
-
-/* TITLURI GENERATOARE COMPACTE */
-.compact-generator-card h3 {
-  color: #ff3399;
-  font-size: 22px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.compact-subtitle {
-  text-align: center;
-  font-style: italic;
-  color: #ff6699;
-  margin: 0 0 20px 0;
-  font-size: 14px;
-  padding-bottom: 12px;
-  border-bottom: 2px dashed #ff99cc;
-}
-
-/* AFIȘAREA MESAJELOR PENTRU MOTIVE (STÂNGA) */
-.compact-message-display {
-  background: #fff9fc;
-  border: 2px dashed #ff99cc;
-  border-radius: 12px;
-  padding: 20px;
-  margin: 15px 0;
-  font-size: 15px;
-  line-height: 1.5;
-  color: #333;
-  text-align: center;
-  min-height: 200px; /* SCUND PENTRU A LĂSA LOC POZEI */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-  font-style: italic;
-}
-
-/* CONTAINER PENTRU POZĂ ȘI DESCRIERE (DREAPTA) */
-.compact-photo-container {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  margin: 15px 0;
-  flex-grow: 1;
-  height: 420px; /* ÎNĂLȚIME MARE PENTRU PĂTRAT */
-}
-
-/* CONTAINER PĂTRAT PENTRU POZĂ */
-.compact-photo-wrapper {
-  width: 100%;
-  height: 280px; /* ÎNĂLȚIME PENTRU PĂTRAT */
-  background: linear-gradient(135deg, #fff0f7, #ffe6f2);
-  border: 3px dashed #ff99cc;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.1);
-  aspect-ratio: 1 / 1; /* FORȚEAZĂ PĂTRATUL */
-}
-
-.compact-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* PĂSTREAZĂ PROPORȚIILE POZEI */
-  display: none;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-}
-
-.compact-photo-placeholder {
-  font-size: 50px;
-  color: #ff99cc;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-
-.compact-photo.loaded {
-  display: block;
-}
-
-/* CONTAINER PENTRU DESCRIERE */
-.compact-description-box {
-  flex: 1;
-  display: flex;
-  align-items: center;
-}
-
-.compact-photo-description {
-  background: #fff9fc;
-  border: 2px dashed #ff99cc;
-  border-radius: 12px;
-  padding: 18px;
-  font-size: 14px;
-  line-height: 1.4;
-  color: #333;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-style: italic;
-  min-height: 100px;
-}
-
-/* BUTOANELE GENERATOARELOR COMPACTE */
-.compact-button {
-  background: linear-gradient(to right, #ff3399, #ff66b2);
-  color: white;
-  border: none;
-  padding: 14px 35px;
-  border-radius: 50px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 15px;
-  box-shadow: 0 5px 15px rgba(255, 51, 153, 0.25);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  max-width: 280px;
-}
-
-.compact-button:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 20px rgba(255, 51, 153, 0.35);
-}
-
-/* === RESPONSIVE DESIGN === */
-@media (max-width: 1100px) {
-  .compact-generators-container {
-    gap: 20px;
-  }
-  
-  .compact-generator {
-    min-width: 300px;
-    max-width: 450px;
-  }
-  
-  .compact-generator-card {
-    height: 620px;
-    padding: 22px;
-  }
-  
-  .compact-message-display {
-    min-height: 180px;
-    padding: 18px;
-  }
-  
-  .compact-photo-container {
-    height: 400px;
-  }
-  
-  .compact-photo-wrapper {
-    height: 250px; /* PĂTRAT MAI MIC PE TABLETĂ */
-  }
-}
-
-@media (max-width: 992px) {
   .compact-generators-container {
     flex-direction: column;
     align-items: center;
+    gap: 30px;
   }
   
   .compact-generator {
     width: 100%;
     max-width: 500px;
-    margin-bottom: 25px;
-  }
-  
-  .compact-generator:last-child {
-    margin-bottom: 0;
-  }
-  
-  .compact-generator-card {
-    height: auto;
-    min-height: 600px;
-  }
-  
-  .compact-message-display {
-    min-height: 170px;
-  }
-  
-  .compact-photo-container {
-    height: auto;
-    min-height: 380px;
   }
 }
 
-@media (max-width: 768px) {
+/* TELEFON (0-767px) */
+@media (max-width: 767px) {
+  .site-header {
+    padding: 10px 15px;
+  }
+  
+  .header-container h1 {
+    font-size: 1.4rem;
+  }
+  
+  .main-scroll-container {
+    margin-top: 60px;
+  }
+  
+  .page-content {
+    padding: 10px;
+    gap: 20px;
+  }
+  
+  .sidebar {
+    padding: 20px 15px;
+    border-radius: 15px;
+  }
+  
+  .sidebar h2 {
+    font-size: 1.3rem;
+  }
+  
+  /* POZA PRINCIPALĂ PE TELEFON */
+  .photo-section {
+    padding: 20px 15px;
+    border-radius: 15px;
+    margin: 0 auto;
+    width: 95%;
+  }
+  
+  .main-photo {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 250px !important;
+    border-radius: 12px;
+    border-width: 2px;
+  }
+  
+  .photo-date {
+    font-size: 1rem;
+    padding: 8px 20px;
+    margin-top: 12px;
+  }
+  
+  /* GENERATOR MESAJE PE TELEFON */
+  .generator-box {
+    width: 95% !important;
+    max-width: 95% !important;
+    padding: 20px 15px;
+    border-radius: 15px;
+    margin: 0 auto;
+  }
+  
+  .generator-box h3 {
+    font-size: 1.2rem;
+  }
+  
+  .message-display {
+    min-height: 120px;
+    padding: 15px;
+    font-size: 1rem;
+  }
+  
+  #generateBtn {
+    padding: 12px;
+    font-size: 1rem;
+  }
+  
+  /* AMINTIRI PE TELEFON */
+  .memories-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+  
+  .memory-card {
+    padding: 20px 15px;
+    border-radius: 15px;
+    width: 95%;
+    margin: 0 auto;
+  }
+  
+  .memory-card h4 {
+    font-size: 1.2rem;
+  }
+  
+  .memory-content p {
+    font-size: 0.95rem;
+  }
+  
+  /* GENERATOARE PE TELEFON */
   .compact-generators-section {
-    margin: 40px auto;
+    padding: 0 10px;
+    margin: 30px auto;
   }
   
   .compact-generators-section h2 {
-    font-size: 24px;
+    font-size: 1.6rem;
     margin-bottom: 30px;
+    padding: 0 10px;
   }
   
   .compact-generator-card {
-    padding: 20px;
+    padding: 20px 15px;
+    border-radius: 15px;
+    width: 100%;
+    margin: 0 auto;
   }
   
   .compact-generator-card h3 {
-    font-size: 20px;
+    font-size: 1.2rem;
   }
   
   .compact-subtitle {
-    font-size: 13px;
-    margin-bottom: 15px;
+    font-size: 0.9rem;
   }
   
+  /* POZE ÎN GENERATOR PE TELEFON */
+  .compact-photo-wrapper {
+    height: 220px !important;
+    border-radius: 12px;
+    width: 100% !important;
+  }
+  
+  .compact-photo {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    max-width: 100% !important;
+  }
+  
+  .compact-photo-placeholder {
+    height: 220px !important;
+    font-size: 2.5rem !important;
+  }
+  
+  /* DESCRIERE PE TELEFON */
+  .compact-description-box {
+    width: 100% !important;
+  }
+  
+  .compact-photo-description {
+    padding: 15px !important;
+    font-size: 0.95rem !important;
+    line-height: 1.4 !important;
+  }
+  
+  /* AFIȘARE MESAJE PE TELEFON */
   .compact-message-display {
     padding: 15px;
+    font-size: 1rem;
     min-height: 150px;
-    font-size: 14px;
   }
   
-  .compact-photo-wrapper {
-    height: 500px; /* PĂTRAT MAI MIC PE MOBILE */
-  }
-  
-  .compact-photo-placeholder {
-    font-size: 40px;
-  }
-  
-  .compact-photo-description {
-    padding: 15px;
-    font-size: 13px;
-    min-height: 90px;
-  }
-  
+  /* BUTOANE PE TELEFON */
   .compact-button {
-    padding: 12px 30px;
-    font-size: 15px;
-    max-width: 250px;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 14px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    margin-top: 15px;
+  }
+  
+  /* CONȚINUT EXTRA PE TELEFON */
+  .extra-content {
+    padding: 30px 15px;
+    gap: 40px;
+    width: 100%;
+  }
+  
+  .extra-content h2 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    padding: 0 10px;
+  }
+  
+  /* FOOTER PE TELEFON */
+  .site-footer {
+    padding: 20px;
+    margin-top: 30px;
+  }
+  
+  .site-footer p {
+    font-size: 1rem;
   }
 }
 
+/* TELEFONE FOARTE MICI */
 @media (max-width: 480px) {
-  .compact-generator-card {
-    padding: 18px;
-  }
-  
-  .compact-generator-card h3 {
-    font-size: 18px;
-  }
-  
-  .compact-subtitle {
-    font-size: 12px;
-    margin-bottom: 12px;
-  }
-  
-  .compact-message-display {
-    padding: 12px;
-    min-height: 140px;
-    font-size: 13px;
-  }
-  
   .compact-photo-wrapper {
-    height: 200px; /* PĂTRAT MAI MIC PE TELEFOANE MICI */
+    height: 200px !important;
   }
   
   .compact-photo-placeholder {
-    font-size: 35px;
+    height: 200px !important;
+    font-size: 2.2rem !important;
   }
   
   .compact-photo-description {
-    padding: 12px;
-    font-size: 12px;
-    min-height: 80px;
+    font-size: 0.9rem !important;
+    padding: 12px !important;
   }
   
   .compact-button {
-    padding: 10px 25px;
-    font-size: 14px;
-    max-width: 220px;
+    padding: 12px 18px;
+    font-size: 0.95rem;
+  }
+  
+  .main-photo {
+    max-height: 220px !important;
+  }
+  
+  .photo-date {
+    font-size: 0.9rem;
+    padding: 7px 18px;
   }
 }
 
-/* FORȚE AZĂ ALINIEREA PE ACEAȘI LINIE LA DESKTOP */
-@media (min-width: 993px) {
+/* FORȚEAZĂ LAYOUT PE DESKTOP */
+@media (min-width: 992px) {
   .compact-generators-container {
     display: flex !important;
     flex-direction: row !important;
     justify-content: space-between !important;
-    align-items: stretch !important;
   }
   
   .compact-generator {
     width: 48% !important;
-    display: flex !important;
-  }
-}
-
-/* CLEARFIX PENTRU FLOAT */
-.compact-generators-container::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-@media (min-width: 769px) {
-  .compact-photo-wrapper {
-    height: 520px !important; /* POZA MAI MARE PE LAPTOP */
-    min-height: 320px !important;
-    max-height: 320px !important;
-    aspect-ratio: 1 / 1 !important;
   }
   
-  .compact-photo-container {
-    height: 460px !important; /* CONTAINER MAI ÎNALT */
-  }
-  
-  .compact-generator-card {
-    height: 690px !important; /* CARD MAI ÎNALT */
-  }
-}
-/* ============================================
-   SECȚIUNEA CU PLAYERE MUZICALE FUNCȚIONALE
-   ============================================ */
-
-.music-section {
-  margin-top: 60px;
-  padding: 40px 20px;
-  width: 100%;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-  border-radius: 25px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-  position: relative;
-  overflow: hidden;
-}
-
-.music-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, #1DB954, #FFD700, #FF4081, #1DB954);
-  background-size: 400% 100%;
-  animation: gradient-shift 8s linear infinite;
-}
-
-@keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 400% 50%; }
-}
-
-.music-section h2 {
-  text-align: center;
-  color: white;
-  font-size: 2.8rem;
-  margin-bottom: 50px;
-  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  position: relative;
-  display: inline-block;
-  width: 100%;
-}
-
-.music-section h2 i {
-  margin-left: 15px;
-  color: #1DB954;
-  animation: beat 1.5s ease-in-out infinite;
-}
-
-@keyframes beat {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-}
-
-.music-players-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 35px;
-  padding: 0 15px;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.music-player {
-  flex: 1;
-  min-width: 340px;
-  max-width: 400px;
-  background: linear-gradient(145deg, #212121, #2d2d2d);
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
-  border: 2px solid transparent;
-  background-clip: padding-box;
-}
-
-.music-player::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(45deg, #1DB954, #FFD700, #FF4081, #1DB954);
-  border-radius: 22px;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.4s;
-}
-
-.music-player:hover::before {
-  opacity: 1;
-}
-
-.music-player:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
-}
-
-.player-header {
-  display: flex;
-  align-items: center;
-  padding: 20px 25px;
-  background: linear-gradient(90deg, #1DB954 0%, #1ed760 100%);
-  position: relative;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.player-icon {
-  font-size: 24px;
-  margin-right: 15px;
-  color: white;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
-}
-
-.player-title {
-  color: white;
-  font-weight: 700;
-  font-size: 20px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.album-cover {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.8s ease;
-  filter: brightness(0.9);
-}
-
-.music-player:hover .album-cover {
-  transform: scale(1.08);
-  filter: brightness(1);
-}
-
-.player-info {
-  padding: 25px;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.song-title {
-  color: white;
-  font-size: 24px;
-  margin-bottom: 8px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-
-.song-artist {
-  color: #b3b3b3;
-  font-size: 18px;
-  margin-bottom: 15px;
-  font-weight: 500;
-}
-
-.song-description {
-  color: #a0a0a0;
-  font-size: 15px;
-  line-height: 1.6;
-  margin-bottom: 10px;
-  font-style: italic;
-}
-
-.player-controls {
-  display: flex;
-  align-items: center;
-  padding: 20px 25px;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  position: relative;
-}
-
-.control-btn {
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 5px;
-  backdrop-filter: blur(5px);
-}
-
-.control-btn:hover {
-  background: rgba(29, 185, 84, 0.3);
-  color: #1DB954;
-  transform: scale(1.1);
-}
-
-.control-btn:active {
-  transform: scale(0.95);
-}
-
-.play-btn {
-  background: linear-gradient(135deg, #1DB954, #1ed760);
-  width: 60px;
-  height: 60px;
-  font-size: 24px;
-  margin: 0 15px;
-  box-shadow: 0 5px 15px rgba(29, 185, 84, 0.4);
-}
-
-.play-btn:hover {
-  background: linear-gradient(135deg, #1ed760, #1DB954);
-  transform: scale(1.15);
-  box-shadow: 0 8px 20px rgba(29, 185, 84, 0.6);
-}
-
-.play-btn.playing {
-  background: linear-gradient(135deg, #FF4081, #FF79B0);
-}
-
-.play-btn.playing:hover {
-  background: linear-gradient(135deg, #FF79B0, #FF4081);
-}
-
-.progress-container {
-  flex-grow: 1;
-  margin: 0 25px;
-}
-
-.progress-bar {
-  width: 100%;
-  height: 6px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
-  overflow: hidden;
-  cursor: pointer;
-  margin-bottom: 8px;
-  transition: height 0.2s;
-}
-
-.progress-bar:hover {
-  height: 8px;
-}
-
-.progress {
-  height: 100%;
-  background: linear-gradient(90deg, #1DB954, #1ed760);
-  width: 0%;
-  transition: width 0.1s linear;
-  border-radius: 3px;
-  position: relative;
-}
-
-.progress::after {
-  content: '';
-  position: absolute;
-  right: -8px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
-  background-color: white;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(29, 185, 84, 0.8);
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-.progress-bar:hover .progress::after {
-  opacity: 1;
-}
-
-.time-display {
-  display: flex;
-  justify-content: space-between;
-  color: #b3b3b3;
-  font-size: 14px;
-  font-weight: 500;
-  margin-top: 5px;
-}
-
-.volume-controls {
-  display: flex;
-  align-items: center;
-  margin-left: 15px;
-  position: relative;
-}
-
-.volume-btn {
-  margin-right: 10px;
-}
-
-.volume-slider {
-  width: 80px;
-  height: 4px;
-  -webkit-appearance: none;
-  appearance: none;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 2px;
-  outline: none;
-  opacity: 0;
-  transition: opacity 0.3s, width 0.3s;
-  position: absolute;
-  right: -90px;
-  top: 50%;
-  transform: translateY(-50%) rotate(-90deg);
-  transform-origin: right center;
-}
-
-.volume-controls:hover .volume-slider {
-  opacity: 1;
-  width: 100px;
-}
-
-.volume-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 12px;
-  height: 12px;
-  background: #1DB954;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-
-.volume-slider::-moz-range-thumb {
-  width: 12px;
-  height: 12px;
-  background: #1DB954;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  border: none;
-}
-
-.music-notes {
-  text-align: center;
-  margin-top: 40px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.music-notes p {
-  color: #b3b3b3;
-  font-size: 18px;
-  margin: 0;
-}
-
-.music-notes i {
-  color: #1DB954;
-  margin-right: 10px;
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
-
-/* Efect de lumină pentru player-ul activ */
-.music-player.active {
-  border-color: #1DB954;
-  box-shadow: 0 0 30px rgba(29, 185, 84, 0.5);
-}
-
-/* Responsive design */
-@media (max-width: 1200px) {
-  .music-player {
-    min-width: 300px;
-    max-width: 350px;
+  .memories-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
   }
 }
 
-@media (max-width: 992px) {
-  .music-players-container {
-    gap: 25px;
-  }
-  
-  .music-player {
-    min-width: 280px;
-    max-width: 320px;
-  }
+/* ANIMAȚII */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 768px) {
-  .music-section h2 {
-    font-size: 2.2rem;
-  }
-  
-  .music-players-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .music-player {
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  .player-controls {
-    padding: 15px 20px;
-  }
-  
-  .progress-container {
-    margin: 0 15px;
-  }
-  
-  .volume-slider {
-    display: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .music-section {
-    padding: 30px 15px;
-  }
-  
-  .music-section h2 {
-    font-size: 1.8rem;
-  }
-  
-  .player-header {
-    padding: 15px 20px;
-  }
-  
-  .album-cover {
-    height: 250px;
-  }
-  
-  .player-info {
-    padding: 20px;
-  }
-  
-  .song-title {
-    font-size: 20px;
-  }
-  
-  .song-artist {
-    font-size: 16px;
-  }
-  
-  .control-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-  }
-  
-  .play-btn {
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-  }
+.memory-card, .compact-generator-card, .generator-box {
+  animation: fadeIn 0.8s ease-out;
 }
