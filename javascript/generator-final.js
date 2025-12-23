@@ -13,6 +13,7 @@ const mesaje = [
     "Chiar dacă spun uneori că ești lipicios,imi place enorm de tare că ești așa cu mine.🍫",
     "Sper ca Cola ta să fie mereu lângă paharul meu de Icetea.🥤",
     "Sper să rămân mereu, îngerașu, bombonica și iubirica ta.🍬",
+    
 ];
 
 function genereazaMesaj() {
