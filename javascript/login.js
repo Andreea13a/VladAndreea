@@ -1,5 +1,5 @@
 const USERS = ["andreea", "vlad"];  // username-urile voastre
-const SECRET_PASS = "09112025";     // parola comună
+const SECRET_PASS = "091120244";     // parola comună
 
 function register() {
   const user = document.getElementById("regUser").value.trim().toLowerCase();
